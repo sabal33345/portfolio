@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career Objective</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="home-container">
+      <img src="myyy.jpg" class="profile-pic" alt="Sabal Dhital Profile Picture">
+      <div class="intro-text">
+        <h2>Hi there, Welcome !!</h2>
+        <p>I'm Sabal Dhital, a passionate developer dedicated to crafting modern, responsive, and visually engaging web experiences.
+          <br>I believe great design is where creativity meets logic — turning ideas into interactive realities that inspire and connect people.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="zigzag left">
+    <div class="card about-card">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web developer currently pursuing my Bachelor's degree in India. I love transforming complex problems into elegant, user-friendly interfaces that are both visually appealing and highly functional. With a strong foundation in web development and programming, I enjoy building responsive websites, creating interactive applications, and continuously learning new technologies to deliver high-quality solutions. I am driven by curiosity, creativity, and the desire to make a meaningful impact through my work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Career Objective Section -->
+  <section id="career" class="zigzag right">
+    <div class="card career-card">
+      <h2>Career Objective</h2>
+      <p>
+        To secure a challenging position as a software or web developer where I can apply my skills in web development, programming, and problem-solving to create innovative and efficient solutions. I aim to contribute to meaningful projects, continuously enhance my technical knowledge, and grow as a developer in a collaborative and forward-thinking environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul class="skills-list">
+      <li>💻 HTML & CSS – Responsive & elegant websites</li>
+      <li>⚙️ JavaScript – Dynamic interactivity</li>
+      <li>☕ Java – Object-oriented programming & backend</li>
+      <li>🐍 Python – Automation & data handling</li>
+    </ul>
+
+    <!-- Weaknesses below skills -->
+    <div class="weaknesses-card">
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Sometimes overthink details</li>
+        <li>Can spend too long perfecting designs</li>
+        <li>Limited experience in mobile development</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="zigzag left">
+    <div class="card achievements-card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Developed multiple responsive websites using html ,css and javascript</li>
+        <li>Winner of a hackathon  coding competition in Nepal on december 2024</li>
+        <li>Built an online portfolio with modern UI/UX which you're viewing right now</li>
+          <li>Desgned multiple big platforms clone including twitter</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-card">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> sabaldhital127@gmail.com</p>
+        <p><strong>Phone:</strong> +91-9427530127</p>
+        <p><strong>LinkedIn:</strong> 
+          <a href="https://np.linkedin.com/in/sabal-dhital-050676295" target="_blank">linkedin.com/in/sabal-dhital-050676295</a>
+        </p>
+        <p><strong>Facebook:</strong> 
+          <a href="https://www.facebook.com/share/17Bh7kDE5t/?mibextid=wwXIfr" target="_blank">www.facebook.com/share/17Bh7kDE5t</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio | Designed by Sabal</p>
+  </footer>
+
+  <!-- Scroll Animations -->
+  <script>
+    const cards = document.querySelectorAll('.zigzag .card, .weaknesses-card, .contact-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
